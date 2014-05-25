@@ -1,0 +1,6 @@
+#############
+## Custom
+#############
+
+local.config.php
+*.komodoproject
