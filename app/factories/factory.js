@@ -5,7 +5,7 @@ BookMeAGame.factory('SearchFactory' , function($http){
 	factory.SearchPlayGrounds = function(game_type, location)
 	{
 		 return	$http({
-				url: 'http://localhost/angularreservation/api/search', 
+				url: '/api/search', 
 				method: "GET",
 				params: {location : location, game_type : game_type}
 			 }); 
