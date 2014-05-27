@@ -34,12 +34,6 @@
 
 <div ng-if="venues.length > 0">
 
-<div class="flat_box_div centred_div filter">
-	<div class="flat_box_body_div ">
-		<p>Sort By : <a href="" ng-click="predicate = 'price'; reverse=false">Rate low to high</a> | <a href="" ng-click="predicate = '-price'; reverse=false">Rate high to low</a></p>
-	</div>
-</div>
-
 <div class="flat_box_div centred_div" data-ng-repeat="venue in venues | orderBy:predicate:reverse">
 	<div class="flat_box_body_div ">
 		<h3><!-- <a href="#/playground/{{venue.Playground_url}}">{{venue.Playground_name}}</a> -->
@@ -47,13 +41,15 @@
 		</h3>
 		<span class="soft">{{venue.Playground_sports_type | uppercase}}</span>
 		<br/>
-		<!-- <span class="soft" ng-repeat="grounds in venue.Playground_venues"></span>
-		<br/> -->
-		 <span class="soft">{{venue.Playground_address}}</span>
+		<span class="soft">Rate : {{venue.Playground_rate}} per time slot of 1 hour</span>
+		<br/>
+		<span class="soft">Address : {{venue.Playground_address}}</span>
+		<br/>
+		<span class="soft">About : {{venue.Playground_about}}</span>
+		<br/>
 		<!-- <br/>
 		<span class="soft">Time slots : {{venue.Venue_time_slots}}</span> -->
 		<!-- br/>
-		<span class="soft">Rate : {{venue.Venue_rate_per_time_slot}}</span> per slot -->
 		<br/>
 		<span class="soft">Contact : {{venue.Playground_venues[0].Venue_contact_number}}</span>
 		<br/>
